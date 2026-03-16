@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "Spreado",
+    "slug": "spreado",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "scheme": "spreado",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0a0a1a"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.spreado.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Spreado needs your location to spread your virus on the map!",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Spreado needs your location to spread your virus on the map!"
+      }
+    },
+    "android": {
+      "package": "com.spreado.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#0a0a1a",
+        "foregroundImage": "./assets/android-icon-foreground.png"
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Spreado needs your location to spread your virus!"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
